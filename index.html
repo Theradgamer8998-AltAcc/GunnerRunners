@@ -14,7 +14,7 @@
 
         body {
             font-family: Arial, sans-serif;
-            background: #121212;
+            background: radial-gradient(circle at top, #1a1a1a, #0d0d0d);
             color: white;
             min-height: 100vh;
             display: flex;
@@ -22,10 +22,16 @@
         }
 
         header {
-            background: #1e1e1e;
+            background: rgba(20, 20, 20, 0.95);
             padding: 20px;
             text-align: center;
-            border-bottom: 2px solid #333;
+            border-bottom: 2px solid #2a2a2a;
+            box-shadow: 0 0 15px rgba(0,0,0,0.6);
+        }
+
+        header h2 {
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
         nav {
@@ -33,13 +39,15 @@
         }
 
         nav a {
-            color: #bbb;
+            color: #aaa;
             text-decoration: none;
-            margin: 0 10px;
+            margin: 0 12px;
+            transition: 0.2s;
         }
 
         nav a:hover {
-            color: white;
+            color: #00e5ff;
+            text-shadow: 0 0 8px #00e5ff;
         }
 
         main {
@@ -52,51 +60,72 @@
         }
 
         .placeholder {
-            max-width: 600px;
+            max-width: 650px;
+            border: 1px solid #2a2a2a;
+            padding: 30px;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.03);
+            box-shadow: 0 0 25px rgba(0,0,0,0.4);
         }
 
         .placeholder h1 {
             font-size: 3rem;
             margin-bottom: 15px;
+            letter-spacing: 1px;
         }
 
         .placeholder p {
-            font-size: 1.2rem;
-            color: #aaa;
+            font-size: 1.1rem;
+            color: #bbb;
+            line-height: 1.5;
+        }
+
+        .status {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #777;
         }
 
         footer {
-            background: #1e1e1e;
+            background: rgba(20, 20, 20, 0.95);
             text-align: center;
             padding: 15px;
-            border-top: 2px solid #333;
+            border-top: 2px solid #2a2a2a;
+            font-size: 0.9rem;
+            color: #888;
         }
     </style>
 </head>
+
 <body>
 
     <header>
-        <h2>Gunner Runners</h2>
+        <h2>GUNNER RUNNERS</h2>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="#">Meet The Team</a>
-            <a href="shop.html">Shop</a>
-            <a href="#">Streaming Times</a>
+            <a href="index.html">HOME</a>
+            <a href="#">MEET THE TEAM</a>
+            <a href="shop.html">SHOP</a>
+            <a href="#">STREAMING TIMES</a>
         </nav>
     </header>
 
     <main>
         <div class="placeholder">
-            <h1>🚧 Website Under Construction 🚧</h1>
+            <h1>🚧 SYSTEM BOOTING 🚧</h1>
             <p>
-                Thanks for stopping by! This site is currently being built.
-                Check back later for updates.
+                Welcome, Operator.<br>
+                The Gunner Runners network is still deploying assets.
+                Check back soon for full mission access.
             </p>
+
+            <div class="status">
+                STATUS: PRE-ALPHA BUILD // UI LOADING
+            </div>
         </div>
     </main>
 
     <footer>
-        © 2026 Gunner Runners
+        © 2026 Gunner Runners // ALL RIGHTS RESERVED
     </footer>
 
 </body>
