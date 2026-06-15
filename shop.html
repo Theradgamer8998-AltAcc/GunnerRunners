@@ -99,10 +99,115 @@
             font-size: 0.9rem;
             color: #888;
         }
+        .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.item {
+    background: rgba(0,0,0,0.4);
+    border: 1px solid #2a2a2a;
+    padding: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+    position: relative;
+}
+
+.item:hover {
+    border-color: #00e5ff;
+    box-shadow: 0 0 12px #00e5ff33;
+    transform: translateY(-3px);
+}
+
+.locked {
+    opacity: 0.6;
+}
+
+.tag {
+    font-size: 0.75rem;
+    color: #777;
+    margin-top: 5px;
+}
+
+/* POPUP */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.popup {
+    width: 360px;
+    background: rgba(20,20,20,0.95);
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px #00e5ff33;
+    text-align: left;
+}
+
+.popup h2 {
+    color: #00e5ff;
+    margin-bottom: 10px;
+}
+
+.popup p {
+    color: #bbb;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.close {
+    margin-top: 15px;
+    padding: 6px 10px;
+    background: #2a2a2a;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.close:hover {
+    background: #00e5ff;
+    color: black;
+}
     </style>
 </head>
 
 <body>
+    <div class="overlay" id="overlay">
+    <div class="popup">
+        <h2 id="itemName">ITEM</h2>
+        <p id="itemDesc">Description</p>
+        <p id="itemStatus">Status</p>
+
+        <button class="close" onclick="closePopup()">CLOSE</button>
+    </div>
+</div>
+    <script>
+function openItem(name, desc, status) {
+    document.getElementById("itemName").innerText = name;
+    document.getElementById("itemDesc").innerText = desc;
+    document.getElementById("itemStatus").innerText = "STATUS: " + status;
+
+    document.getElementById("overlay").style.display = "flex";
+}
+
+function closePopup() {
+    document.getElementById("overlay").style.display = "none";
+}
+
+document.getElementById("overlay").addEventListener("click", function(e) {
+    if (e.target === this) closePopup();
+});
+</script>
 
     <header>
         <h2>GUNNER RUNNERS</h2>
@@ -113,26 +218,48 @@
             <a href="streaming.html">STREAMING TIMES</a>
         </nav>
     </header>
-
     <main>
-        <div class="panel">
-            <h1>🛒 ARMORY ACCESS</h1>
+    <div class="panel">
 
-            <p>
-                Welcome, Operator.<br>
-                The Armory database is still syncing with the main server.
-            </p>
+        <h1>🛒 ARMORY GRID</h1>
 
-            <div class="terminal">
-> connecting to shop server...<br>
-> loading inventory...<br>
-> ERROR: ASSET DATABASE OFFLINE<br><br>
+        <p>
+            Select an item to inspect.<br>
+            Most assets are still locked in the database.
+        </p>
 
-STATUS: SHOP UNDER CONSTRUCTION<br>
-CHECK BACK FOR LOADOUTS, MERCH, AND DIGITAL DROPS
+        <div class="grid">
+
+            <div class="item" onclick="openItem('Raven Operator Skin', 'Rare cosmetic outfit for elite stealth missions.', 'LOCKED')">
+                <h3>Raven Skin</h3>
+                <div class="tag">COSMETIC</div>
             </div>
+
+            <div class="item" onclick="openItem('XR-77 Rifle', 'High damage assault rifle. Balanced recoil system.', 'LOCKED')">
+                <h3>XR-77 Rifle</h3>
+                <div class="tag">WEAPON</div>
+            </div>
+
+            <div class="item locked" onclick="openItem('Energy Credits Pack', 'Premium currency for unlocking gear.', 'UNAVAILABLE')">
+                <h3>Credits Pack</h3>
+                <div class="tag">CURRENCY</div>
+            </div>
+
+            <div class="item" onclick="openItem('Neon HUD Pack', 'Custom UI overlays for your interface.', 'LOCKED')">
+                <h3>HUD Pack</h3>
+                <div class="tag">UI</div>
+            </div>
+
         </div>
-    </main>
+
+        <div class="terminal">
+> syncing armory database...<br>
+> inventory partial load complete<br>
+> most items currently classified
+        </div>
+
+    </div>
+</main>
 
     <footer>
         © 2026 Gunner Runners // ARMORY DIVISION
