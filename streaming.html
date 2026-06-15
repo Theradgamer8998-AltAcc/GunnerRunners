@@ -1,1 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gunner Runners - Streaming Times</title>
 
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: radial-gradient(circle at top, #1a1a1a, #0d0d0d);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: rgba(20, 20, 20, 0.95);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #2a2a2a;
+        }
+
+        header h2 {
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #aaa;
+            text-decoration: none;
+            margin: 0 12px;
+            transition: 0.2s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #00e5ff;
+            text-shadow: 0 0 8px #00e5ff;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .panel {
+            max-width: 800px;
+            border: 1px solid #2a2a2a;
+            padding: 30px;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.03);
+            box-shadow: 0 0 25px rgba(0,0,0,0.4);
+        }
+
+        .panel h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .panel p {
+            font-size: 1.1rem;
+            color: #bbb;
+            margin-bottom: 20px;
+        }
+
+        .schedule {
+            text-align: left;
+            background: rgba(0,0,0,0.4);
+            border: 1px solid #2a2a2a;
+            border-radius: 8px;
+            padding: 15px;
+            color: #9efcff;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .note {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        footer {
+            background: rgba(20, 20, 20, 0.95);
+            text-align: center;
+            padding: 15px;
+            border-top: 2px solid #2a2a2a;
+            font-size: 0.9rem;
+            color: #888;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>GUNNER RUNNERS</h2>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="team.html">MEET THE TEAM</a>
+            <a href="shop.html">SHOP</a>
+            <a href="streaming.html" class="active">STREAMING TIMES</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="panel">
+            <h1>📡 STREAM SCHEDULE</h1>
+
+            <p>
+                Live broadcast schedule is currently being synchronized.
+            </p>
+
+            <div class="schedule">
+> CONNECTING TO STREAM SERVER...<br>
+> FETCHING BROADCAST TIMES...<br>
+> ERROR: DATA NOT AVAILABLE<br><br>
+
+MONDAY     — ???<br>
+TUESDAY    — ???<br>
+WEDNESDAY  — ???<br>
+THURSDAY   — ???<br>
+FRIDAY     — ???<br>
+SATURDAY   — ???<br>
+SUNDAY     — ???<br><br>
+
+STATUS: SCHEDULE PENDING UPDATE
+            </div>
+
+            <div class="note">
+                Tip: Stream times will appear once operators go live.
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        © 2026 Gunner Runners // BROADCAST DIVISION
+    </footer>
+
+</body>
+</html>
