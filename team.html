@@ -179,7 +179,42 @@
 </head>
 
 <body>
+    <script>
+function openPopup(name, role, desc, status) {
+    document.getElementById("name").innerText = name;
+    document.getElementById("role").innerText = "Role: " + role;
+    document.getElementById("desc").innerText = desc;
+    document.getElementById("status").innerText = "Status: " + status;
 
+    document.getElementById("overlay").style.display = "flex";
+}
+
+function closePopup() {
+    document.getElementById("overlay").style.display = "none";
+}
+
+// close when clicking outside popup
+document.getElementById("overlay").addEventListener("click", function(e) {
+    if (e.target === this) {
+        closePopup();
+    }
+});
+</script>
+<div class="overlay" id="overlay">
+    <div class="popup">
+        <h2 id="name">PLAYER</<div class="overlay" id="overlay">
+    <div class="popup">
+        <h2 id="name">PLAYER</h2>
+        <p id="role">Role:</p>
+        <p id="desc">Description</p>
+        <p id="status">Status:</p>
+
+        <button class="close-btn" onclick="closePopup()">CLOSE</button>
+    </div>
+</div>
+        <button class="close-btn" onclick="closePopup()">CLOSE</button>
+    </div>
+</div>
     <header>
         <h2>GUNNER RUNNERS</h2>
         <nav>
