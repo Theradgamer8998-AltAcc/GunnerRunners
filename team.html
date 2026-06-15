@@ -1,1 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gunner Runners - Team</title>
 
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: radial-gradient(circle at top, #1a1a1a, #0d0d0d);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: rgba(20, 20, 20, 0.95);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #2a2a2a;
+        }
+
+        header h2 {
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #aaa;
+            text-decoration: none;
+            margin: 0 12px;
+            transition: 0.2s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #00e5ff;
+            text-shadow: 0 0 8px #00e5ff;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .panel {
+            max-width: 800px;
+            border: 1px solid #2a2a2a;
+            padding: 30px;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.03);
+            box-shadow: 0 0 25px rgba(0,0,0,0.4);
+        }
+
+        .panel h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .panel p {
+            font-size: 1.1rem;
+            color: #bbb;
+            margin-bottom: 25px;
+        }
+
+        .roster {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+        }
+
+        .card {
+            background: rgba(0,0,0,0.4);
+            border: 1px solid #2a2a2a;
+            border-radius: 8px;
+            padding: 20px;
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            border-color: #00e5ff;
+            box-shadow: 0 0 10px #00e5ff33;
+            transform: translateY(-3px);
+        }
+
+        .card h3 {
+            color: #00e5ff;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        .status {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #777;
+            text-align: left;
+        }
+
+        footer {
+            background: rgba(20, 20, 20, 0.95);
+            text-align: center;
+            padding: 15px;
+            border-top: 2px solid #2a2a2a;
+            font-size: 0.9rem;
+            color: #888;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>GUNNER RUNNERS</h2>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="team.html" class="active">MEET THE TEAM</a>
+            <a href="shop.html">SHOP</a>
+            <a href="#">STREAMING TIMES</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="panel">
+            <h1>🪖 SQUAD ROSTER</h1>
+
+            <p>
+                Operators currently being deployed into the system.
+            </p>
+
+            <div class="roster">
+                <div class="card">
+                    <h3>PLAYER 1</h3>
+                    <p>Role: Assault<br>STATUS: ACTIVE</p>
+                </div>
+
+                <div class="card">
+                    <h3>PLAYER 2</h3>
+                    <p>Role: Support<br>STATUS: ACTIVE</p>
+                </div>
+
+                <div class="card">
+                    <h3>PLAYER 3</h3>
+                    <p>Role: Sniper<br>STATUS: LOADING</p>
+                </div>
+
+                <div class="card">
+                    <h3>PLAYER 4</h3>
+                    <p>Role: Unknown<br>STATUS: OFFLINE</p>
+                </div>
+            </div>
+
+            <div class="status">
+> syncing operator profiles...<br>
+> loading loadouts...<br>
+> awaiting squad deployment...
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        © 2026 Gunner Runners // SQUAD DIVISION
+    </footer>
+
+</body>
+</html>
