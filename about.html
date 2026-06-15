@@ -1,1 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gunner Runners - Intel</title>
 
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: radial-gradient(circle at top, #1a1a1a, #0d0d0d);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: rgba(20, 20, 20, 0.95);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #2a2a2a;
+        }
+
+        header h2 {
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #aaa;
+            text-decoration: none;
+            margin: 0 12px;
+            transition: 0.2s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #00e5ff;
+            text-shadow: 0 0 8px #00e5ff;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .intel {
+            max-width: 850px;
+            width: 100%;
+            border: 1px solid #2a2a2a;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.03);
+            box-shadow: 0 0 25px rgba(0,0,0,0.4);
+            padding: 30px;
+        }
+
+        .intel h1 {
+            font-size: 3rem;
+            text-align: center;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .sub {
+            text-align: center;
+            color: #777;
+            margin-bottom: 25px;
+        }
+
+        .terminal {
+            background: rgba(0,0,0,0.4);
+            border: 1px solid #2a2a2a;
+            padding: 15px;
+            border-radius: 8px;
+            color: #9efcff;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+        }
+
+        .card {
+            background: rgba(0,0,0,0.4);
+            border: 1px solid #2a2a2a;
+            border-radius: 8px;
+            padding: 18px;
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            border-color: #00e5ff;
+            box-shadow: 0 0 10px #00e5ff33;
+            transform: translateY(-3px);
+        }
+
+        .card h3 {
+            color: #00e5ff;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .card p {
+            color: #aaa;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        footer {
+            background: rgba(20, 20, 20, 0.95);
+            text-align: center;
+            padding: 15px;
+            border-top: 2px solid #2a2a2a;
+            font-size: 0.9rem;
+            color: #888;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>GUNNER RUNNERS</h2>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="team.html">MEET THE TEAM</a>
+            <a href="shop.html">SHOP</a>
+            <a href="streaming.html">STREAMING TIMES</a>
+            <a href="about.html" class="active">ABOUT / INTEL</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="intel">
+
+            <h1>🛰️ INTEL FILE</h1>
+            <div class="sub">MISSION BRIEFING // ACCESS LEVEL: PUBLIC</div>
+
+            <div class="terminal">
+> INITIALIZING GUNNER RUNNERS NETWORK...<br>
+> LOADING BACKGROUND DATA...<br>
+> STATUS: ONLINE<br><br>
+
+UNIT: GUNNER RUNNERS<br>
+TYPE: FPS COMMUNITY / CONTENT SQUAD<br>
+FOCUS: STREAMING • GAMEPLAY • COMPETITIVE PLAY<br><br>
+
+NOTE: THIS NETWORK IS STILL EXPANDING
+            </div>
+
+            <div class="grid">
+
+                <div class="card">
+                    <h3>OVERVIEW</h3>
+                    <p>
+                        Gunner Runners is a tactical FPS-themed group focused on gameplay,
+                        streaming, and building a community around competitive and fun matches.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>MISSION</h3>
+                    <p>
+                        Create high-energy content, grow a squad-based identity,
+                        and develop a recognizable gaming brand.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>STATUS</h3>
+                    <p>
+                        Early development stage.<br>
+                        Systems are being built and deployed.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>FUTURE PLANS</h3>
+                    <p>
+                        Events, custom games, merch, and full squad operations
+                        coming in future updates.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        © 2026 Gunner Runners // INTEL DIVISION
+    </footer>
+
+</body>
+</html>
