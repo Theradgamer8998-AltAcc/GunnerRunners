@@ -179,6 +179,16 @@
 </head>
 
 <body>
+    <div class="overlay" id="overlay">
+    <div class="popup">
+        <h2 id="name">PLAYER</h2>
+        <p id="role">Role:</p>
+        <p id="desc">Description</p>
+        <p id="status">Status:</p>
+
+        <button class="close-btn" onclick="closePopup()">CLOSE</button>
+    </div>
+</div>
     <script>
 function openPopup(name, role, desc, status) {
     document.getElementById("name").innerText = name;
@@ -200,18 +210,6 @@ document.getElementById("overlay").addEventListener("click", function(e) {
     }
 });
 </script>
-<div class="overlay" id="overlay">
-    <div class="popup">
-        <h2 id="name">PLAYER</<div class="overlay" id="overlay">
-    <div class="popup">
-        <h2 id="name">PLAYER</h2>
-        <p id="role">Role:</p>
-        <p id="desc">Description</p>
-        <p id="status">Status:</p>
-
-        <button class="close-btn" onclick="closePopup()">CLOSE</button>
-    </div>
-</div>
     <header>
         <h2>GUNNER RUNNERS</h2>
         <nav>
